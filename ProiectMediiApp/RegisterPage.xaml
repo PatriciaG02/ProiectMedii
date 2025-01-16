@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiApp.RegisterPage">
+    <StackLayout Padding="20" VerticalOptions="Center">
+        <Label Text="Register" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               Margin="0,20,0,20" />
+
+        <Entry Placeholder="Username" x:Name="UsernameEntry" />
+        <Entry Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" />
+        <Entry Placeholder="Confirm Password" x:Name="ConfirmPasswordEntry" IsPassword="True" />
+
+        <Label x:Name="ErrorMessage" TextColor="Red" IsVisible="False" />
+
+        <Button Text="Register" Clicked="OnRegisterClicked" />
+    </StackLayout>
+</ContentPage>

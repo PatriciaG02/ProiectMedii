@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiApp.MainPage"
+             Title="Welcome to Fitness App">
+
+    <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+
+        <!-- Titlul aplicației -->
+        <Label Text="Welcome to Fitness App"
+           FontSize="24"
+           FontAttributes="Bold"
+           HorizontalOptions="Center" />
+
+        <!-- Imagine sau logo (opțional) -->
+        <Image Source="fitness_logo.png" 
+           HeightRequest="150" 
+           HorizontalOptions="Center" />
+
+        <!-- Buton pentru navigare la secțiunea Traineri -->
+        <Button Text="Manage Trainers"
+            FontSize="18"
+            Clicked="OnManageTrainersClicked"
+            Margin="10" />
+        <Button Text="Manage Locations" 
+            Clicked="OnManageLocationsClicked"
+            BackgroundColor="Yellow" 
+            TextColor="White" />
+
+        <Button Text="Login" 
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Center" 
+                WidthRequest="200" />
+
+        <Button Text="Register" 
+                Clicked="OnRegisterClicked"
+                HorizontalOptions="Center" 
+                WidthRequest="200" />
+        <Button
+            Text="Create Training Session"
+            BackgroundColor="Purple"
+            TextColor="White"
+            Clicked="OnCreateTrainingSessionClicked" />
+
+    </StackLayout>
+</ContentPage>

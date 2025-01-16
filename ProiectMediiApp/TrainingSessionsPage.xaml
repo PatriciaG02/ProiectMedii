@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiApp.TrainingSessionsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Training Sessions" FontSize="Large" HorizontalOptions="Center" />
+
+            <ListView x:Name="SessionsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="10">
+                                <Label Text="{Binding Description}" FontAttributes="Bold" />
+                                <Label Text="{Binding Date, StringFormat='{0:MM/dd/yyyy}'}" />
+                                <Label Text="{Binding Trainer.Name}" />
+                                <Button Text="Delete" Clicked="OnDeleteSessionClicked" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProiectMediiApp.ManageLocationsPage"
+             Title="Manage Locations">
+
+    <StackLayout Padding="10">
+        <Label Text="Locations" FontSize="20" FontAttributes="Bold" />
+
+        <CollectionView ItemsSource="{Binding Locations}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{Binding Name}" VerticalOptions="Center" />
+                        <Button Text="Delete" Command="{Binding Path=BindingContext.DeleteLocationCommand, Source={x:Reference this}}" CommandParameter="{Binding Id}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Entry Placeholder="Enter new location name" Text="{Binding NewLocationName}" />
+        <Button Text="Add Location" Command="{Binding AddLocationCommand}" />
+    </StackLayout>
+
+</ContentPage>
